@@ -12,6 +12,24 @@ app.get("/", (req, res) => {
   res.send("Welcome to Code Red Subscription Tracker!");
 });
 
+app.get("/subscription", (req, res) => {
+  res.json([
+    {
+      id: 1,
+      name: "Netflix",
+      price: 10.0,
+      renewalDate: "2026-07-01",
+    },
+
+    {
+      id: 2,
+      name: "AppleMusic",
+      price: 15.0,
+      renewalDate: "2026-07-05",
+    },
+  ]);
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
