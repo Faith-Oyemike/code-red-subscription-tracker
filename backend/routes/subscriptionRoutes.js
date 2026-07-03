@@ -2,10 +2,10 @@
 const express = require("express");
 
 //create a router to organise subcription routes
-const route = express.Router();
+const router = express.Router();
 
 //listen for a get request on the "/subscription" route
-route.get("/subscription", (req, res) => {
+router.get("/subscription", (req, res) => {
   res.json([
     {
       id: 1,
@@ -24,4 +24,4 @@ route.get("/subscription", (req, res) => {
 });
 
 //export route so server.js can see it
-module.exports = Router;
+module.exports = router;
